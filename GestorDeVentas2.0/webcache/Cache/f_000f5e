@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Lotes</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Gestor de Ventas</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+        <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="view-lotes.php">Lista de Lotes</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Navbar End -->
+</body>
+</html><script src="./sweetalert.js"></script>
+<script src="./promise-poly.js"></script>
+<div class="container">
+	<h3 class="page-title">Lista de Lotes
+      <a href="add-lote.php" class="btn btn-success float-right">
+      	Nueva Venta
+      </a>
+   </h3>
+   <div class="container margin-bottom-1">
+   <a href="excel.php" class="btn btn-success float-right">
+      	Exportar a Excel
+      </a>
+      <a href="./pdf.php" class="btn btn-info float-right margin-right-1">
+      	Exportar a PDF
+      </a>
+   <form class="form-inline my-2 my-lg-0" method="post" action="search.php">
+      <input class="form-control mr-sm-2" type="text" placeholder="Busca por lote" name="Busqueda">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+    </div>
+  <!-- Table --->
+  <div id="number1">
+
+   <table class="table">
+   	<tr>
+       <th>Lote</th>
+   		<th>Cliente</th>
+   		<th>Fecha</th>
+        <th>Precio de Venta</th>
+        <th>Plazo</th>
+        <th>Pagos R.</th>
+        <th>Saldo</th>
+        <th>Acciones</th>
+</tr>
+        <tr>
+        <td>M1L1</td>
+	   		<td>MYK CAPITAL SAPI S.A. DE C.V.</td>
+	   		<td>2020-07-10</td>
+            <td>1,425,000.00</td>
+	   		<td>12 </td>
+            <td>7</td>
+	   		<td>493,749.50</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=4" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('4')">Borrar</button>
+
+               <a href="view-pagos.php?Id=4" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M1L2</td>
+	   		<td>MYK CAPITAL SAPI S.A. DE C.V.</td>
+	   		<td>2020-07-10</td>
+            <td>1,425,000.00</td>
+	   		<td>12 </td>
+            <td>7</td>
+	   		<td>493,749.50</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=5" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('5')">Borrar</button>
+
+               <a href="view-pagos.php?Id=5" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M1L3</td>
+	   		<td>MYK CAPITAL SAPI S.A. DE C.V.</td>
+	   		<td>2020-07-10</td>
+            <td>1,425,000.00</td>
+	   		<td>12 </td>
+            <td>7</td>
+	   		<td>1,425,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=6" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('6')">Borrar</button>
+
+               <a href="view-pagos.php?Id=6" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M1L4</td>
+	   		<td>MYK CAPITAL SAPI S.A. DE C.V.</td>
+	   		<td>2020-07-10</td>
+            <td>1,425,000.00</td>
+	   		<td>12 </td>
+            <td>7</td>
+	   		<td>1,425,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=7" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('7')">Borrar</button>
+
+               <a href="view-pagos.php?Id=7" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M2L2</td>
+	   		<td>JOSE FCO JAVIER SANTOS MIJANGOS</td>
+	   		<td>2020-09-05</td>
+            <td>2,000,000.00</td>
+	   		<td>12 </td>
+            <td>0</td>
+	   		<td>2,000,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=8" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('8')">Borrar</button>
+
+               <a href="view-pagos.php?Id=8" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M2L6</td>
+	   		<td>JORGE MANUEL ZAMUDIO PALAZUELOS</td>
+	   		<td>2020-09-14</td>
+            <td>2,000,000.00</td>
+	   		<td>12</td>
+            <td>7</td>
+	   		<td>800,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=21" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('21')">Borrar</button>
+
+               <a href="view-pagos.php?Id=21" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M2L7</td>
+	   		<td>JORGE MANUEL ZAMUDIO PALAZUELOS</td>
+	   		<td>2020-09-14</td>
+            <td>2,000,000.00</td>
+	   		<td>12</td>
+            <td>7</td>
+	   		<td>800,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=20" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('20')">Borrar</button>
+
+               <a href="view-pagos.php?Id=20" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M2L8</td>
+	   		<td>JULIO CESAR ZAMORA GASTELUM</td>
+	   		<td>2020-09-24</td>
+            <td>2,000,000.00</td>
+	   		<td>12</td>
+            <td>2</td>
+	   		<td>1,000,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=15" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('15')">Borrar</button>
+
+               <a href="view-pagos.php?Id=15" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M2L9</td>
+	   		<td>MARIO HUMBERTO ANGULO BUELNA</td>
+	   		<td>2020-09-24</td>
+            <td>2,000,000.00</td>
+	   		<td>12</td>
+            <td>2</td>
+	   		<td>1,000,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=14" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('14')">Borrar</button>
+
+               <a href="view-pagos.php?Id=14" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M3L1</td>
+	   		<td>PATRICIA MARTINEZ SIFUENTES</td>
+	   		<td>2020-09-14</td>
+            <td>1,500,000.00</td>
+	   		<td>12 </td>
+            <td>2</td>
+	   		<td>1,500,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=9" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('9')">Borrar</button>
+
+               <a href="view-pagos.php?Id=9" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M3L2</td>
+	   		<td>PATRICIA MARTINEZ SIFUENTES</td>
+	   		<td>2020-09-14</td>
+            <td>1,500,000.00</td>
+	   		<td>12</td>
+            <td>2</td>
+	   		<td>833,334.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=10" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('10')">Borrar</button>
+
+               <a href="view-pagos.php?Id=10" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M3L3</td>
+	   		<td>PATRICIA MARTINEZ SIFUENTES</td>
+	   		<td>2020-09-14</td>
+            <td>1,500,000.00</td>
+	   		<td>12</td>
+            <td>2</td>
+	   		<td>833,333.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=11" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('11')">Borrar</button>
+
+               <a href="view-pagos.php?Id=11" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M3L7</td>
+	   		<td>RAFAEL A. RODRIGUEZ CASTAÑOS</td>
+	   		<td>2020-08-21</td>
+            <td>1,500,000.00</td>
+	   		<td>16</td>
+            <td>1</td>
+	   		<td>1,200,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=12" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('12')">Borrar</button>
+
+               <a href="view-pagos.php?Id=12" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M6L5</td>
+	   		<td>JESUS ANTONIO CASTRO ZAVALA</td>
+	   		<td>2020-08-24</td>
+            <td>1,000,000.00</td>
+	   		<td>12</td>
+            <td>5</td>
+	   		<td>580,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=2" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('2')">Borrar</button>
+
+               <a href="view-pagos.php?Id=2" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M6L6</td>
+	   		<td>JESUS OSCAR ARMIENTA QUIROZ</td>
+	   		<td>2020-08-21</td>
+            <td>1,000,000.00</td>
+	   		<td>12</td>
+            <td>5</td>
+	   		<td>580,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=1" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('1')">Borrar</button>
+
+               <a href="view-pagos.php?Id=1" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M6L7</td>
+	   		<td>DANIEL ZAMUDIO LERMA</td>
+	   		<td>2020-09-03</td>
+            <td>1,000,000.00</td>
+	   		<td>12</td>
+            <td>5</td>
+	   		<td>400,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=19" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('19')">Borrar</button>
+
+               <a href="view-pagos.php?Id=19" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M6L15</td>
+	   		<td>ALVARO LEMMEN MEYER SANDOVAL</td>
+	   		<td>2020-07-10</td>
+            <td>1,000,000.00</td>
+	   		<td>12</td>
+            <td>4</td>
+	   		<td>0.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=13" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('13')">Borrar</button>
+
+               <a href="view-pagos.php?Id=13" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M6L16</td>
+	   		<td>ALVARO LEMMEN MEYER SANDOVAL</td>
+	   		<td>2020-07-10</td>
+            <td>1,000,000.00</td>
+	   		<td>12</td>
+            <td>4</td>
+	   		<td>0.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=16" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('16')">Borrar</button>
+
+               <a href="view-pagos.php?Id=16" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M7L5</td>
+	   		<td>LUIS FDO OROZCO PEIMBERT</td>
+	   		<td>2020-07-11</td>
+            <td>1,000,000.00</td>
+	   		<td>12</td>
+            <td>1</td>
+	   		<td>0.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=23" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('23')">Borrar</button>
+
+               <a href="view-pagos.php?Id=23" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M7L6</td>
+	   		<td>LUIS FDO OROZCO PEIMBERT</td>
+	   		<td>2020-07-11</td>
+            <td>1,000,000.00</td>
+	   		<td>12</td>
+            <td>1</td>
+	   		<td>0.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=22" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('22')">Borrar</button>
+
+               <a href="view-pagos.php?Id=22" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M7L7</td>
+	   		<td>LUIS FDO OROZCO PEIMBERT</td>
+	   		<td>2020-07-11</td>
+            <td>1,000,000.00</td>
+	   		<td>12</td>
+            <td>2</td>
+	   		<td>0.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=24" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('24')">Borrar</button>
+
+               <a href="view-pagos.php?Id=24" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M11L46</td>
+	   		<td>FERNANDO GARCIA SANCHEZ</td>
+	   		<td>2020-01-13</td>
+            <td>950,000.00</td>
+	   		<td>12</td>
+            <td>12</td>
+	   		<td>50,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=18" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('18')">Borrar</button>
+
+               <a href="view-pagos.php?Id=18" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+              <tr>
+        <td>M11L47</td>
+	   		<td>FERNANDO GARCIA SANCHEZ</td>
+	   		<td>2020-01-13</td>
+            <td>950,000.00</td>
+	   		<td>12</td>
+            <td>12</td>
+	   		<td>50,000.00</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=17" class="btn btn-danger">
+	   				Editar
+               </a>
+               <!-- <a href="delete-lote.php?Id=?=$row'Id'];?>"  class="btn btn-primary">Borrar</a> -->
+               <button class="btn btn-primary" onClick="sweetDelete('17')">Borrar</button>
+
+               <a href="view-pagos.php?Id=17" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+     
+         </table>
+   </div>
+      <div class="container">
+   <div class="row">
+    <div class="ajustandoprice">
+    <td>31,600,000.00</td>
+    </div>
+        <div class="ajustandosaldo">
+      <td>15,464,166.00</td>
+    </div>
+  </div>
+   </div>
+      
+ <!-- Table End --->
+</div> 
+<script src="./jquery.min.js"></script>
+<script>
+function sweetDelete(Id){
+   Swal.fire({
+  title: '¿Seguro que quieres borrarlo?',
+  icon: 'warning',
+  text: "No podras deshacer esta accion, se borraran los registros permanentemente",
+  type: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Si, Eliminar Lote!',
+  cancelButtonText: 'No, cancelar!',
+  confirmButtonClass: 'btn btn-primary',
+  cancelButtonClass: 'btn btn-success',
+  buttonsStyling: false
+}).then((result) => {
+  if (result.isConfirmed) {
+  $.ajax({
+    url:'./delete-lote.php',
+    type:'POST',
+    data: ({Id: Id}),
+    success: function(html){
+                    location.reload();
+                }
+   });
+   Swal.fire(
+      'Eliminado!',
+      'Eliminado Correctamente',
+      'success'
+    )
+}
+}
+)
+}
+
+</script>
+</body>
+</html>

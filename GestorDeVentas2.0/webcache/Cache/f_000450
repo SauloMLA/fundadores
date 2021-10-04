@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Lotes</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Gestor de Ventas</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="view-lotes.php">Lista de Lotes</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Navbar End -->
+</body>
+</html><div class="container">
+	<h3 class="page-title">Lista de Lotes
+      <a href="add-lote.php" class="btn btn-success float-right">
+      	Nueva Venta
+      </a>
+   </h3>
+   <div class="container margin-bottom-1">
+   <a href="excel.php" class="btn btn-success float-right">
+      	Exportar a Excel
+      </a>
+      <a href="./pdf.php" class="btn btn-info float-right margin-right-1">
+      	Exportar a PDF
+      </a>
+   <form class="form-inline my-2 my-lg-0" method="post" action="search.php">
+      <input class="form-control mr-sm-2" type="text" placeholder="Busca por lote" name="Busqueda">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+    </div>
+  <!-- Table --->
+  <div id="number1">
+
+   <table class="table">
+   	<tr>
+       <th>Lote</th>
+   		<th>Cliente</th>
+   		<th>Fecha</th>
+        <th>Precio de Venta</th>
+        <th>Plazo</th>
+        <th>Pagos Recibidos</th>
+        <th>Saldo</th>
+        <th>Acciones</th>
+</tr>
+        <tr>
+        <td>M0L2</td>
+	   		<td>S</td>
+	   		<td>2020-12-22</td>
+            <td>23.50</td>
+	   		<td>A</td>
+            <td>0</td>
+	   		<td>23.5</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=23" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=23" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=23">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L1</td>
+	   		<td>A</td>
+	   		<td>2020-12-22</td>
+            <td>23.00</td>
+	   		<td>12 MESES</td>
+            <td>0</td>
+	   		<td>23</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=17" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=17" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=17">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L1</td>
+	   		<td>G</td>
+	   		<td>2020-12-22</td>
+            <td>230.00</td>
+	   		<td>150</td>
+            <td>0</td>
+	   		<td>230</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=18" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=18" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=18">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L1</td>
+	   		<td>S</td>
+	   		<td>2020-12-22</td>
+            <td>230.00</td>
+	   		<td>520</td>
+            <td>0</td>
+	   		<td>230</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=19" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=19" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=19">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L1</td>
+	   		<td>Saulo</td>
+	   		<td>2020-12-22</td>
+            <td>234.00</td>
+	   		<td>12</td>
+            <td>0</td>
+	   		<td>234</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=24" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=24" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=24">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L1</td>
+	   		<td>Saulo</td>
+	   		<td>2020-12-22</td>
+            <td>500.00</td>
+	   		<td>12</td>
+            <td>0</td>
+	   		<td>500</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=28" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=28" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=28">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L1</td>
+	   		<td>S</td>
+	   		<td>2020-12-22</td>
+            <td>500.00</td>
+	   		<td>12 meses</td>
+            <td>2</td>
+	   		<td>246</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=30" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=30" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=30">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L1</td>
+	   		<td>Saulo Mario</td>
+	   		<td>2020-12-22</td>
+            <td>500.00</td>
+	   		<td>12 meses</td>
+            <td>0</td>
+	   		<td>500</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=31" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=31" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=31">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L1</td>
+	   		<td>S</td>
+	   		<td>2020-12-22</td>
+            <td>5,000.00</td>
+	   		<td>12 </td>
+            <td>0</td>
+	   		<td>5000</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=32" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=32" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=32">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L2</td>
+	   		<td>Saulo</td>
+	   		<td>2020-12-21</td>
+            <td>1,000,000,000.00</td>
+	   		<td>123</td>
+            <td>1</td>
+	   		<td>999999500</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=12" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=12" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=12">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L2</td>
+	   		<td>Saulo Mario Alaniz Leon</td>
+	   		<td>2020-12-22</td>
+            <td>1,000.00</td>
+	   		<td>12 meses</td>
+            <td>0</td>
+	   		<td>1000</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=15" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=15" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=15">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L2</td>
+	   		<td>Saulo Mario</td>
+	   		<td>2020-12-22</td>
+            <td>12.00</td>
+	   		<td>12</td>
+            <td>0</td>
+	   		<td>12</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=16" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=16" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=16">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L2</td>
+	   		<td>Saulo</td>
+	   		<td>2020-12-22</td>
+            <td>12.00</td>
+	   		<td>12</td>
+            <td>0</td>
+	   		<td>12</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=21" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=21" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=21">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L4</td>
+	   		<td>Saulo</td>
+	   		<td>2020-12-21</td>
+            <td>100,000.00</td>
+	   		<td>12 meses</td>
+            <td>0</td>
+	   		<td>100000</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=13" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=13" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=13">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M1L5</td>
+	   		<td>Gloria</td>
+	   		<td>2020-12-21</td>
+            <td>500.00</td>
+	   		<td>12</td>
+            <td>0</td>
+	   		<td>500</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=14" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=14" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=14">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M2L0</td>
+	   		<td>A</td>
+	   		<td>2020-12-22</td>
+            <td>1,200.50</td>
+	   		<td>12 MESES</td>
+            <td>0</td>
+	   		<td>1200</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=25" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=25" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=25">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M2L1</td>
+	   		<td>S</td>
+	   		<td>2020-12-22</td>
+            <td>23.00</td>
+	   		<td>1</td>
+            <td>0</td>
+	   		<td>23</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=22" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=22" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=22">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M2L1</td>
+	   		<td>VALERIA ALANIZ LEON</td>
+	   		<td>2020-12-22</td>
+            <td>123.00</td>
+	   		<td>12</td>
+            <td>0</td>
+	   		<td>123</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=27" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=27" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=27">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M2L2</td>
+	   		<td>S</td>
+	   		<td>2020-12-22</td>
+            <td>340.00</td>
+	   		<td>12 MESES</td>
+            <td>0</td>
+	   		<td>340</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=20" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=20" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=20">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M2L2</td>
+	   		<td>G</td>
+	   		<td>2020-12-22</td>
+            <td>23.00</td>
+	   		<td>12 MESES</td>
+            <td>0</td>
+	   		<td>23</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=33" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=33" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=33">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M2L3</td>
+	   		<td>Gloria</td>
+	   		<td>2020-12-18</td>
+            <td>1,000.00</td>
+	   		<td>12</td>
+            <td>2</td>
+	   		<td>858</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=10" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=10" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=10">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+              <tr>
+        <td>M2L4</td>
+	   		<td>FUNDADORES PYME</td>
+	   		<td>2020-12-22</td>
+            <td>123.00</td>
+	   		<td>24 MESES</td>
+            <td>0</td>
+	   		<td>123</td>
+	   		<td>
+	   			<a href="edit-lote.php?Id=26" class="btn btn-danger">
+	   				Editar
+               </a>
+               <a href="#confirm-delete"  class="btn btn-primary">Borrar</a>
+
+               <a href="view-pagos.php?Id=26" class="btn btn-success" >
+	   				Nuevo Pago
+	   			</a>
+	   		</td>
+         </tr>
+         <div class="modal" id="confirm-delete">
+  <div class="modal-dialog" role="document" id="confirm-delete">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seguro que quieres borrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta accion no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+         <a href="delete-lote.php?Id=26">
+        <button type="button" class="btn btn-primary" >Borrar</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+         </table>
+   </div>
+ <!-- Table End --->
+</div> 
+</body>
+</html>
